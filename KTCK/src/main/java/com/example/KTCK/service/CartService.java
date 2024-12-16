@@ -25,7 +25,7 @@ public class CartService {
 
     @Transactional
     public void addToCart(Long cartId, Products product, String color, String size, int quantity,String sessionId) {
-        // Lấy giỏ hàng từ cơ sở dữ liệu, nếu không có thì tạo mới
+       
         Cart cart = cartRepository.findById(cartId).orElseGet(() -> {
             Cart newCart = new Cart();
             newCart.setCreatedDate(LocalDateTime.now());
@@ -33,18 +33,18 @@ public class CartService {
             return newCart;
         });
 
-        // Kiểm tra xem sản phẩm cùng loại đã có trong giỏ hàng chưa
+        
         CartItem existingItem = cart.getItems().stream()
                 .filter(item -> item.getProduct().getId().equals(product.getId()) && item.getColor().equals(color) && item.getSize().equals(size))
                 .findFirst()
                 .orElse(null);
 
         if (existingItem != null) {
-            // Cập nhật số lượng nếu sản phẩm đã tồn tại trong giỏ hàng
+          
             existingItem.setQuantity(existingItem.getQuantity() + quantity);
             cartItemRepository.save(existingItem);  // Lưu lại CartItem đã cập nhật
         } else {
-            // Thêm mới nếu sản phẩm chưa có
+           
             CartItem newItem = new CartItem();
             newItem.setProduct(product);
             newItem.setColor(color);
@@ -55,7 +55,6 @@ public class CartService {
             cartItemRepository.save(newItem);  // Lưu CartItem mới
         }
 
-        // Lưu giỏ hàng vào cơ sở dữ liệu
         cartRepository.save(cart);  // Lưu giỏ hàng với các thay đổi
     }
 
@@ -65,18 +64,14 @@ public class CartService {
             sessionId = "default-session-id";  // Giá trị mặc định nếu không có sessionId
         }
 
-        // Tạo đối tượng Cart với sessionId
         Cart cart = new Cart(sessionId);
 
-        // Gán thời gian hiện tại nếu createdDate chưa có
         if (cart.getCreatedDate() == null) {
             cart.setCreatedDate(LocalDateTime.now());  // Gán thời gian hiện tại
         }
 
-        // Lưu giỏ hàng vào cơ sở dữ liệu
         cartRepository.save(cart);
 
-        // Trả về ID của giỏ hàng vừa tạo
         return cart.getId();
     }
 }
