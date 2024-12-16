@@ -27,18 +27,6 @@ public class HomeController {
         return "home2";
     }
 
-    @GetMapping("/home3")
-    public String home3Page(){
-        return "home3";
-    }
-
-
-//    @GetMapping("/shop-detail")
-//    public String shopdetailPage(){
-//        return "shop-detail";
-//    }
-
-
     @GetMapping("/blog-detail")
     public String blogdetail(){
         return "blog-detail";
