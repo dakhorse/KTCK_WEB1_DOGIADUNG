@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+	<title>
+		HouseHoldMart
+	</title>
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700%7CRoboto:300,400,500,700,900&amp;display=swap" rel="stylesheet"/>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+	<script src="https://cdn.tailwindcss.com">
+	</script>
+</head>
+<body class="bg-gray-100">
+<div id="pageWrapper">
+	<!-- Header -->
+	<header class="bg-white shadow">
+		<div class="container mx-auto px-4 py-6 flex justify-between items-center">
+			<h1 class="text-3xl font-bold">
+				HouseHoldMart
+			</h1>
+			<nav>
+				<ul class="flex space-x-4">
+					<li>
+						<a class="text-gray-700 hover:text-gray-900" href="/">
+							Home
+						</a>
+					</li>
+					<li>
+						<a class="text-gray-700 hover:text-gray-900" href="/shop">
+							Shop
+						</a>
+					</li>
+					<li>
+						<a class="text-gray-700 hover:text-gray-900" href="/about-us">
+							About
+						</a>
+					</li>
+					<li>
+						<a class="text-gray-700 hover:text-gray-900" href="/contact-us">
+							Contact
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- Main Content -->
+	<main>
+
+
+		<!-- Shop Content -->
+		<div class="container mx-auto py-10 flex flex-col lg:flex-row-reverse">
+			<!-- Main Content -->
+			<div class="w-full lg:w-3/4">
+				<!-- Filter and Sort -->
+				<div class="flex justify-between items-center mb-6">
+					<div class="flex items-center space-x-2">
+						<button class="text-gray-700">
+							<i class="fas fa-th-large">
+							</i>
+						</button>
+						<button class="text-gray-700">
+							<i class="fas fa-list">
+							</i>
+						</button>
+						<span>
+         Showing 1–9 of 24 results
+        </span>
+					</div>
+					<div class="flex items-center space-x-2">
+        <span>
+         Sort by:
+        </span>
+						<select class="border border-gray-300 rounded px-2 py-1">
+							<option>
+								Default sorting
+							</option>
+							<option>
+								Sort by popularity
+							</option>
+							<option>
+								Sort by average rating
+							</option>
+							<option>
+								Sort by latest
+							</option>
+							<option>
+								Sort by price: low to high
+							</option>
+							<option>
+								Sort by price: high to low
+							</option>
+						</select>
+					</div>
+				</div>
+				<!-- Products Grid -->
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+					<!-- Product Item -->
+					<div class="border bg-white">
+						<div class="relative overflow-hidden">
+							<img alt="Iron" class="w-full" height="300" src="/images/Ban-la-kangaroo-kgsi1800.jpg" width="300"/>
+							<ul class="absolute inset-0 flex justify-center items-center space-x-2 opacity-0 hover:opacity-100 transition-opacity">
+								<li>
+									<a class="text-white bg-gray-800 p-2 rounded-full" href="#">
+										<i class="fas fa-heart">
+										</i>
+									</a>
+								</li>
+								<li>
+									<a class="text-white bg-gray-800 p-2 rounded-full" href="#">
+										<i class="fas fa-cart-plus">
+										</i>
+									</a>
+								</li>
+								<li>
+									<a class="text-white bg-gray-800 p-2 rounded-full" href="#">
+										<i class="fas fa-eye">
+										</i>
+									</a>
+								</li>
+								<li>
+									<a class="text-white bg-gray-800 p-2 rounded-full" href="#">
+										<i class="fas fa-arrow-right">
+										</i>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="p-4 text-center">
+							<a class="block text-lg font-semibold mb-2" href="#">
+								Iron
+							</a>
+							<span class="text-xl font-bold">
+          $50.00
+         </span>
+						</div>
+					</div>
+					<!-- Repeat Product Items as needed -->
+					<div class="border bg-white">
+						<div class="relative overflow-hidden">
+							<img alt="Carpet" class="w-full" height="300" src="/images/ban-tham-trai-san-gia-re.jpg" width="300"/>
+							<ul class="absolute inset-0 flex justify-center items-center space-x-2 opacity-0 hover:opacity-100 transition-opacity">
+								<li>
+									<a class="text-white bg-gray-800 p-2 rounded-full" href="#">
+										<i class="fas fa-heart">
+										</i>
+									</a>
+								</li>
+								<li>
+									<a class="text-white bg-gray-800 p-2 rounded-full" href="#">
+										<i class="fas fa-cart-plus">
+										</i>
+									</a>
+								</li>
+								<li>
+									<a class="text-white bg-gray-800 p-2 rounded-full" href="#">
+										<i class="fas fa-eye">
+										</i>
+									</a>
+								</li>
+								<li>
+									<a class="text-white bg-gray-800 p-2 rounded-full" href="#">
+										<i class="fas fa-arrow-right">
+										</i>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="p-4 text-center">
+							<a class="block text-lg font-semibold mb-2" href="#">
+								Carpet
+							</a>
+							<span class="text-xl font-bold">
+          $130.00
+         </span>
+						</div>
+					</div>
+
+
+					<div class="border bg-white">
+						<div class="relative overflow-hidden">
+							<img alt="Mop" class="w-full" height="300" src="/images/cây%20lau%20nhà.jpg" width="300"/>
+							<ul class="absolute inset-0 flex justify-center items-center space-x-2 opacity-0 hover:opacity-100 transition-opacity">
+								<li>
+									<a class="text-white bg-gray-800 p-2 rounded-full" href="#">
+										<i class="fas fa-heart">
+										</i>
+									</a>
+								</li>
+								<li>
+									<a class="text-white bg-gray-800 p-2 rounded-full" href="#">
+										<i class="fas fa-cart-plus">
+										</i>
+									</a>
+								</li>
+								<li>
+									<a class="text-white bg-gray-800 p-2 rounded-full" href="#">
+										<i class="fas fa-eye">
+										</i>
+									</a>
+								</li>
+								<li>
+									<a class="text-white bg-gray-800 p-2 rounded-full" href="#">
+										<i class="fas fa-arrow-right">
+										</i>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="p-4 text-center">
+							<a class="block text-lg font-semibold mb-2" href="#">
+								Mop
+							</a>
+							<span class="text-xl font-bold">
+          $20.00
+         </span>
+						</div>
+					</div>
+
+					<div class="border bg-white">
+						<div class="relative overflow-hidden">
+							<img alt="BookShelf" class="w-full" height="300" src="/images/Ke-sach-phong-khach-TS6815.jpg" width="300"/>
+							<ul class="absolute inset-0 flex justify-center items-center space-x-2 opacity-0 hover:opacity-100 transition-opacity">
+								<li>
+									<a class="text-white bg-gray-800 p-2 rounded-full" href="#">
+										<i class="fas fa-heart">
+										</i>
+									</a>
+								</li>
+								<li>
+									<a class="text-white bg-gray-800 p-2 rounded-full" href="#">
+										<i class="fas fa-cart-plus">
+										</i>
+									</a>
+								</li>
+								<li>
+									<a class="text-white bg-gray-800 p-2 rounded-full" href="#">
+										<i class="fas fa-eye">
+										</i>
+									</a>
+								</li>
+								<li>
+									<a class="text-white bg-gray-800 p-2 rounded-full" href="#">
+										<i class="fas fa-arrow-right">
+										</i>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="p-4 text-center">
+							<a class="block text-lg font-semibold mb-2" href="#">
+								BookShelf
+							</a>
+							<span class="text-xl font-bold">
+          $300.00
+         </span>
+						</div>
+					</div>
+
+					<div class="border bg-white">
+						<div class="relative overflow-hidden">
+							<img alt="Egg Beater" class="w-full" height="300" src="/images/máy%20đánh%20trứng.png" width="300"/>
+							<ul class="absolute inset-0 flex justify-center items-center space-x-2 opacity-0 hover:opacity-100 transition-opacity">
+								<li>
+									<a class="text-white bg-gray-800 p-2 rounded-full" href="#">
+										<i class="fas fa-heart">
+										</i>
+									</a>
+								</li>
+								<li>
+									<a class="text-white bg-gray-800 p-2 rounded-full" href="#">
+										<i class="fas fa-cart-plus">
+										</i>
+									</a>
+								</li>
+								<li>
+									<a class="text-white bg-gray-800 p-2 rounded-full" href="#">
+										<i class="fas fa-eye">
+										</i>
+									</a>
+								</li>
+								<li>
+									<a class="text-white bg-gray-800 p-2 rounded-full" href="#">
+										<i class="fas fa-arrow-right">
+										</i>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="p-4 text-center">
+							<a class="block text-lg font-semibold mb-2" href="#">
+								Egg Beater
+							</a>
+							<span class="text-xl font-bold">
+          $140.00
+         </span>
+						</div>
+					</div>
+				</div>
+				<!-- Pagination -->
+				<div class="mt-8">
+					<nav aria-label="Page navigation">
+						<ul class="pagination justify-center">
+							<li class="page-item disabled">
+								<a aria-label="Previous" class="page-link" href="#">
+
+           </span>
+								</a>
+							</li>
+
+							<li class="page-item">
+								<a aria-label="Next" class="page-link" href="#">
+
+           </span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<!-- Sidebar -->
+			<aside class="w-full lg:w-1/4 lg:pr-8">
+				<!-- Search Widget -->
+				<div class="mb-8">
+					<form action="#" class="relative">
+						<input class="w-full border border-gray-300 rounded px-4 py-2" placeholder="Search product..." type="search"/>
+						<button class="absolute right-2 top-2 text-gray-500">
+							<i class="fas fa-search">
+							</i>
+						</button>
+					</form>
+				</div>
+				<!-- Categories Widget -->
+				<div class="mb-8">
+					<h3 class="text-xl font-bold mb-4">
+						Product Categories
+					</h3>
+					<ul class="space-y-2">
+						<li>
+							<a class="flex justify-between items-center text-gray-700 hover:text-gray-900" href="#">
+								Kitchen Appliances
+								<span class="bg-gray-200 rounded-full px-2 py-1 text-sm">
+           6
+          </span>
+							</a>
+						</li>
+						<li>
+							<a class="flex justify-between items-center text-gray-700 hover:text-gray-900" href="#">
+								Cleaning Tools
+								<span class="bg-gray-200 rounded-full px-2 py-1 text-sm">
+           8
+          </span>
+							</a>
+						</li>
+						<li>
+							<a class="flex justify-between items-center text-gray-700 hover:text-gray-900" href="#">
+								Laundry
+								<span class="bg-gray-200 rounded-full px-2 py-1 text-sm">
+           9
+          </span>
+							</a>
+						</li>
+						<li>
+							<a class="flex justify-between items-center text-gray-700 hover:text-gray-900" href="#">
+								Home Decor
+								<span class="bg-gray-200 rounded-full px-2 py-1 text-sm">
+           6
+          </span>
+							</a>
+						</li>
+						<li>
+							<a class="flex justify-between items-center text-gray-700 hover:text-gray-900" href="#">
+								Uncategorized
+								<span class="bg-gray-200 rounded-full px-2 py-1 text-sm">
+           1
+          </span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- Price Filter Widget -->
+				<div class="mb-8">
+					<h3 class="text-xl font-bold mb-4">
+						Filter by Price
+					</h3>
+					<form action="#">
+						<div class="flex items-center space-x-2">
+							<input class="w-full" max="1000" min="0" step="10" type="range"/>
+							<span class="text-gray-700">
+          $0 - $1000
+         </span>
+						</div>
+						<button class="mt-4 w-full bg-gray-800 text-white py-2 rounded" type="submit">
+							Filter
+						</button>
+					</form>
+				</div>
+				<!-- Top Rated Products Widget -->
+				<div class="mb-8">
+					<h3 class="text-xl font-bold mb-4">
+						Top Rated
+					</h3>
+				</div>
+			</aside>
+		</div>
+	</main>
+</div>
+</body>
+</html>
