@@ -7,26 +7,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "carts")
+@Table(name = "cart")
 public class Cart {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // List of cart items
-    @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<CartItem> items = new ArrayList<>();
+    private Long customerId;
+    private String productList; // có thể lưu danh sách sản phẩm dạng JSON hoặc chuỗi, tùy theo yêu cầu
+    private double totalAmount;
 
-    // New field for session ID (or user ID)
-    @Column(name = "session_id", nullable = false)
-    private String sessionId;
+    public Cart() {}
 
-    // New field for the cart creation date
-    @Column(name = "created_date", nullable = false)
-    private LocalDateTime createdDate;
+    public Cart(Long customerId, String productList, double totalAmount) {
+        this.customerId = customerId;
+        this.productList = productList;
+        this.totalAmount = totalAmount;
+    }
 
-    // Getters and Setters
     public Long getId() {
         return id;
     }
@@ -35,37 +33,28 @@ public class Cart {
         this.id = id;
     }
 
-    public List<CartItem> getItems() {
-        return items;
+    public Long getCustomerId() {
+        return customerId;
     }
 
-    public void setItems(List<CartItem> items) {
-        this.items = items;
+    public void setCustomerId(Long customerId) {
+        this.customerId = customerId;
     }
 
-    public String getSessionId() {
-        return sessionId;
+    public String getProductList() {
+        return productList;
     }
 
-    public void setSessionId(String sessionId) {
-        this.sessionId = sessionId;
+    public void setProductList(String productList) {
+        this.productList = productList;
     }
 
-    public LocalDateTime getCreatedDate() {
-        return createdDate;
+    public double getTotalAmount() {
+        return totalAmount;
     }
 
-    public void setCreatedDate(LocalDateTime createdDate) {
-        this.createdDate = createdDate;
+    public void setTotalAmount(double totalAmount) {
+        this.totalAmount = totalAmount;
     }
-
-    // Constructor for setting sessionId and createdDate at the time of cart creation
-    public Cart(String sessionId) {
-        this.sessionId = sessionId;
-        this.createdDate = LocalDateTime.now();
-    }
-
-    // Default constructor (for JPA)
-    public Cart() {
-    }
+// Getters và Setters
 }
